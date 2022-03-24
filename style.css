@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(218, 23%, 16%);
+  font-family: 'Manrope', sans-serif;
+  text-align: center;
+}
+
+button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+  padding: 0 0 10px;
+  position: fixed;
+  bottom: 0;
+}
+
+.attribution a {
+  color: hsl(318, 45%, 44%);
+}
+
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+
+.advice {
+  max-width: 450px; 
+  padding: 20px 40px 80px;
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: hsl(217, 19%, 24%);
+  position: relative;
+  opacity: 0;
+}
+
+
+.advice.blur {
+  opacity: 1;
+  transition: all 500ms;
+}
+
+
+.advice__text {
+  flex-basis: 100%;
+  margin-bottom: 0;
+  font-size: 13px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: hsl(150, 100%, 66%);
+}
+
+
+.advice__main-text {
+  font-size: 28px;
+  font-weight: 800;
+  color: hsl(193, 38%, 86%);
+}
+
+.advice__image {
+  width: 100%;
+}
+
+.advice__button {
+  transition: all 500ms;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: hsl(150, 100%, 66%);
+  position: absolute;
+  bottom: -25px;
+  margin: 0 auto;
+  left: auto;
+  right: auto;
+  text-align: center;
+}
+
+.advice__button-image {
+  float: left;
+  transition: all 500ms;
+}
+
+.advice__button:hover {
+  box-shadow: 0px 0px 40px 2px hsl(150, 100%, 66%);
+}
+
+.advice__button:hover .advice__button-image {
+  transform: rotate(180deg);
+}
+
+.advice__button:active .advice__button-image {
+  transform: scale(0.5);
+}
+
+@media (max-width: 580px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .advice__main-text {
+    font-size: 22px;
+  }
+}
