@@ -38,6 +38,7 @@ button {
 .advice {
   min-width: 450px;
   max-width: 450px;
+  max-height: 400px;
   padding: 20px 40px 80px;
   margin: auto;
   border-radius: 10px;

@@ -6,17 +6,20 @@ const adviceText = document.querySelector('.advice__main-text')
 
 
 window.onload = getAdvice()
-setTimeout(showBlock, 500)
+setTimeout(function () {
+  showBlock()
+  getBlockHeight()
+}, 500)
 
 
 button.addEventListener('click', function () {
 
-  setTimeout(function(){
+  setTimeout(function () {
     getAdvice()
-  },300)
+  }, 300)
 
-  setTimeout(function(){
-    container.style.height = adviceText.clientHeight + 100 + 'px'
+  setTimeout(function () {
+    getBlockHeight()
   }, 600)
 
   addFadeEffect(adviceText)
@@ -24,16 +27,16 @@ button.addEventListener('click', function () {
 
 function getAdvice() {
   fetch(link)
-  .then(response => {
-    return response.json()
-  })
-  .then(adviceData => {
-    const dataObj = adviceData.slip
-    adviceID.innerText = `#${dataObj.id}`
-    adviceText.innerText = `"${dataObj.advice}"`
-  }).catch(error => {
-    console.log(error);
-  })
+    .then(response => {
+      return response.json()
+    })
+    .then(adviceData => {
+      const dataObj = adviceData.slip
+      adviceID.innerText = `#${dataObj.id}`
+      adviceText.innerText = `"${dataObj.advice}"`
+    }).catch(error => {
+      console.log(error);
+    })
 }
 
 function showBlock() {
@@ -42,7 +45,12 @@ function showBlock() {
 
 function addFadeEffect(element) {
   element.classList.add('fade')
-  setTimeout(function(){
+  setTimeout(function () {
     element.classList.remove('fade')
-  },600)
+  }, 600)
+}
+
+function getBlockHeight() {
+  container.style.height = adviceText.clientHeight + 100 + 'px'
+  container.style.maxHeight = adviceText.clientHeight + 100 + 'px'
 }
