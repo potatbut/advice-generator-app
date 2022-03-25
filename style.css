@@ -36,7 +36,8 @@ button {
 
 
 .advice {
-  max-width: 450px; 
+  min-width: 450px;
+  max-width: 450px;
   padding: 20px 40px 80px;
   margin: auto;
   border-radius: 10px;
@@ -49,9 +50,9 @@ button {
 }
 
 
-.advice.blur {
+.advice.show {
   opacity: 1;
-  transition: all 500ms;
+  transition: 500ms;
 }
 
 
@@ -69,14 +70,23 @@ button {
   font-size: 28px;
   font-weight: 800;
   color: hsl(193, 38%, 86%);
+  transition: 300ms;
+  opacity: 1;
+}
+
+.advice__main-text.fade {
+  opacity: 0;
 }
 
 .advice__image {
-  width: 100%;
+  max-height: 16px;
+  max-width: calc(100% - 20px);
+  position: absolute;
+  bottom: 80px;
 }
 
 .advice__button {
-  transition: all 500ms;
+  transition: 500ms;
   padding: 20px;
   border-radius: 50px;
   background-color: hsl(150, 100%, 66%);
@@ -90,7 +100,7 @@ button {
 
 .advice__button-image {
   float: left;
-  transition: all 500ms;
+  transition: 500ms;
 }
 
 .advice__button:hover {
@@ -107,10 +117,19 @@ button {
 
 @media (max-width: 580px) {
   .container {
-    padding: 0 10px;
+    padding: 0 20px;
+  }
+
+  .advice {
+    padding: 10px 10px 80px;
+    min-width: auto;
   }
 
   .advice__main-text {
     font-size: 22px;
+  }
+
+  .advice__image {
+    max-width: calc(100% - 40px);
   }
 }

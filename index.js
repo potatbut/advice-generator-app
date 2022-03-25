@@ -1,16 +1,25 @@
 const link = 'https://api.adviceslip.com/advice'
+const container = document.querySelector('.advice')
 const button = document.querySelector('.advice__button')
 const adviceID = document.querySelector('.advice__number')
 const adviceText = document.querySelector('.advice__main-text')
-const container = document.querySelector('.advice')
 
 
 window.onload = getAdvice()
+setTimeout(showBlock, 500)
 
-setTimeout(addBlur, 500)
 
 button.addEventListener('click', function () {
-  getAdvice()
+
+  setTimeout(function(){
+    getAdvice()
+  },300)
+
+  setTimeout(function(){
+    container.style.height = adviceText.clientHeight + 100 + 'px'
+  }, 600)
+
+  addFadeEffect(adviceText)
 })
 
 function getAdvice() {
@@ -27,6 +36,13 @@ function getAdvice() {
   })
 }
 
-function addBlur() {
-  container.classList.add('blur')
+function showBlock() {
+  container.classList.add('show')
+}
+
+function addFadeEffect(element) {
+  element.classList.add('fade')
+  setTimeout(function(){
+    element.classList.remove('fade')
+  },600)
 }
