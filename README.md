@@ -11,9 +11,9 @@
 <p align="center">-----------------------</p>
 <h3 align="center">Built with</h3>
 <p align="center">
-<img src="https://img.icons8.com/material-outlined/344/html.png" width="50" height="50">
-<img src="https://img.icons8.com/material-outlined/344/css.png" width="50" height="50">
-<img src="https://img.icons8.com/material-outlined/344/js.png" width="50" height="50">
+<img src="images/html-code.svg" width="50" height="50">
+<img src="images/css-code.svg" width="50" height="50">
+<img src="images/js-code.svg" width="50" height="50">
 </p>
 <br>
 <h3 align="center">Animated preview</h3>
