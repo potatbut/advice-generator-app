@@ -5,7 +5,7 @@
 <br>
 <p align="center">
 <a href= "https://potatbut.github.io/advice-generator-app/">DEMO 👁️‍🗨️</a>&nbsp;|&nbsp;
-<a href= "https://www.last.fm/user/daigo-anon">CHALLENGE 🕹️</a>&nbsp;|&nbsp;
+<a href= "https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db">CHALLENGE 🕹️</a>&nbsp;|&nbsp;
 <a href= "https://github.com/potatbut">MY PROFILE 🧚‍♀️</a>
 </p>
 <p align="center">-----------------------</p>
